@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-animation</title>
+
+    <style>
+        body{
+            background-color: #fff;
+        }
+
+
+        h1::before{
+            content: "THIS_IS_CSS_ANIMATION...";
+            font-size: 50px;
+            font-weight: 50;
+            font-family: "caveat", cursive;
+            color: green;
+            position:absolute;
+            top: 40%;
+            left: 10%;
+            overflow: hidden;
+            border-right: 1px solid red;
+            animation:  slide 5s ease-in-out infinite;
+        }
+
+
+       
+
+
+        @keyframes slide{
+            0%{
+                color: red;
+                text-shadow: 0 0 5px red;
+                width:0;
+            }
+
+            50%{
+                color: blue;
+                width: 60%;
+            }
+
+            100%{
+                width:0;
+                color: pink;
+                color: green;
+                text-shadow: 0 0 5px blue;
+            }
+        }
+
+        @media(max-width:768px){
+            @keyframes slide{
+            0%{
+                color: red;
+                text-shadow: 0 0 5px red;
+                width:0;
+            }
+
+            50%{
+                color: blue;
+                width: 49%;
+            }
+
+            100%{
+                width:0;
+                color: pink;
+                color: green;
+                text-shadow: 0 0 5px blue;
+            }
+        }
+
+        h1::before{
+            font-size: 26px;
+        }
+    }
+
+
+    @media(max-width:400px){
+         @keyframes slide{
+            0%{
+                color: red;
+                text-shadow: 0 0 5px red;
+                width:0;
+            }
+
+            50%{
+                color: blue;
+                width: 55%;
+            }
+
+            100%{
+                width:0;
+                color: pink;
+                color: green;
+                text-shadow: 0 0 5px blue;
+            }
+        }
+    }
+
+
+
+   
+        
+    </style>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>
